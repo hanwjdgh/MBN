@@ -2,7 +2,11 @@
 
 Docker Hub : https://cloud.docker.com/u/hanwjdgh/repository/docker/hanwjdgh/mlearn
 
-using : eyed3
+## mp3 파일 tag 정보
+
+```bash
+pip install eyed3
+```
 
 
 ## mp3 파일의 tag 정보가 깨지는 경우
