@@ -10,8 +10,6 @@ for file_name in files:
     name = audio.tag.artist
     title = audio.tag.title
 
-    #print (audio.tag.artist)
-    #print (audio.tag.title, end="\n\n")
 
     if name is None:
         name = "none"
