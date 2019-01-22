@@ -16,19 +16,19 @@ for file_name in files:
         audio.tag.title = lst[1].split('.')[0][1:]
         audio.tag.save()
 
-    name = audio.tag.artist
-    title = audio.tag.title
+    else:
+        name = audio.tag.artist
+        title = audio.tag.title
 
 
-    if name is None:
-        name = "none"
+        if name is None:
+            name = "none"
 
-    new_file_name = file_name
+        new_file_name = file_name
     
-    if title is not None:
-        new_file_name = "./src path/"+title+".mp3"
-        print(new_file_name)
-        os.rename(file_name, new_file_name) 
+        if title is not None:
+            new_file_name = "./src path/"+title+".mp3"
+            os.rename(file_name, new_file_name) 
     
     c_path = "./dst path/" + name + "/"
    
