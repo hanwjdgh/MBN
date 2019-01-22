@@ -7,6 +7,15 @@ files = glob.glob("./src path/*.mp3", recursive=True)
 for file_name in files:
     audio = eyed3.load(file_name)
 
+    if audio.tag is None:
+        basename = os.path.basename(file_name)
+        lst = re.split("[-_]",basename)
+        
+        audio.initTag()
+        audio.tag.artist = lst[0].replace(" ","")
+        audio.tag.title = lst[1].split('.')[0][1:]
+        audio.tag.save()
+
     name = audio.tag.artist
     title = audio.tag.title
 
